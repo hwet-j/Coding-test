@@ -26,6 +26,8 @@ public class _03공원산책 {
 		System.out.println(Arrays.toString(partArr[2]));
 		System.out.println(Arrays.toString(startPoint));
 
+		int block = 0;
+
 		for (int i=0; i<routes.length; i++){
 			String[] ro = routes[i].split(" ");
 			int move = Integer.parseInt(ro[1]);
@@ -34,10 +36,28 @@ public class _03공원산책 {
 			switch (ro[0]) {
 				case "E":
 					for (int j=0;j<move;j++){
-						if (startPoint[1] + j > partArr[i].length || ) {
-
+						if (startPoint[1] + j > partArr[i].length || partArr[startPoint[0]][startPoint[1] + j].equals("X")) {
+							block = 1;
+							break;
 						}
 					}
+					if (block == 0){
+						startPoint[1] = startPoint[1] + move;
+					}
+					block = 0;
+					break;
+				case "W":
+					for (int j=0;j<move;j++){
+						if (startPoint[1] - j < 0 || partArr[startPoint[0]][startPoint[1] - j].equals("X")) {
+							block = 1;
+							break;
+						}
+					}
+					if (block == 0){
+						startPoint[1] = startPoint[1] - move;
+					}
+					block = 0;
+					break;
 
 			}
 		}
