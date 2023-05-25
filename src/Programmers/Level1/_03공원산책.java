@@ -7,8 +7,8 @@ import java.util.Map;
 public class _03공원산책 {
 
 	public static void main(String[] args) {
-		String[] park =  {"SOO","OOO","OOO"};
-		String[] routes = {"E 2","S 2","W 1"};
+		String[] park =  {"OSO","OOO","OXO","OOO"};
+		String[] routes = {"E 2","S 3","W 1"};
 		String[][] partArr = new String[park.length][park[0].length()];
 		int[] startPoint = new int[2];
 
@@ -21,22 +21,22 @@ public class _03공원산책 {
 				}
 			}
 		}
-		System.out.println(Arrays.toString(partArr[0]));
-		System.out.println(Arrays.toString(partArr[1]));
-		System.out.println(Arrays.toString(partArr[2]));
-		System.out.println(Arrays.toString(startPoint));
+//		System.out.println(Arrays.toString(partArr[0]));
+//		System.out.println(Arrays.toString(partArr[1]));
+//		System.out.println(Arrays.toString(partArr[2]));
+//		System.out.println(Arrays.toString(partArr[3]));
+//		System.out.println(Arrays.toString(startPoint));
 
 		int block = 0;
 
 		for (int i=0; i<routes.length; i++){
 			String[] ro = routes[i].split(" ");
 			int move = Integer.parseInt(ro[1]);
-			System.out.println(ro[0]);
-			System.out.println(ro[1]);
+			block = 0;
 			switch (ro[0]) {
 				case "E":
-					for (int j=0;j<move;j++){
-						if (startPoint[1] + j > partArr[i].length || partArr[startPoint[0]][startPoint[1] + j].equals("X")) {
+					for (int j=1;j<=move;j++){
+						if (startPoint[1] + j >= partArr[i].length || partArr[startPoint[0]][startPoint[1] + j].equals("X")) {
 							block = 1;
 							break;
 						}
@@ -44,10 +44,9 @@ public class _03공원산책 {
 					if (block == 0){
 						startPoint[1] = startPoint[1] + move;
 					}
-					block = 0;
 					break;
 				case "W":
-					for (int j=0;j<move;j++){
+					for (int j=1;j<=move;j++){
 						if (startPoint[1] - j < 0 || partArr[startPoint[0]][startPoint[1] - j].equals("X")) {
 							block = 1;
 							break;
@@ -56,11 +55,33 @@ public class _03공원산책 {
 					if (block == 0){
 						startPoint[1] = startPoint[1] - move;
 					}
-					block = 0;
 					break;
-
+				case "N":
+					for (int j=1;j<=move;j++){
+						if (startPoint[0] - j < 0 || partArr[startPoint[0] - j][startPoint[1]].equals("X")) {
+							block = 1;
+							break;
+						}
+					}
+					if (block == 0){
+						startPoint[0] = startPoint[0] - move;
+					}
+					break;
+				case "S":
+					for (int j=1;j<=move;j++){
+						if (startPoint[0] + j >= park.length || partArr[startPoint[0] + j][startPoint[1]].equals("X")) {
+							block = 1;
+							break;
+						}
+					}
+					if (block == 0){
+						startPoint[0] = startPoint[0] + move;
+					}
+					break;
 			}
+			System.out.println(Arrays.toString(startPoint));
 		}
+
 
 
 	/*	int block = 0;
