@@ -21,9 +21,9 @@ public class _04바탕화면정리 {
 			}
 		}
 		int hmax = 0;
-		int hmin = 51;
+		int hmin = 50;
 		int wmax = 0;
-		int wmin = 51;
+		int wmin = 50;
 
 		for (int i=0;i<list.size();i++){
 			String[] strArr = list.get(i).split(",");
