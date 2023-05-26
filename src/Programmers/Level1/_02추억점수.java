@@ -42,8 +42,5 @@ public class _02추억점수 {
 			}
 			answer[i] = sum;
 		}
-
-
-
 	}
 }
