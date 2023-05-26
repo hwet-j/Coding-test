@@ -42,11 +42,5 @@ public class _01달리기경주 {
 			list.set(rank, temp);
 			list.set(rank-1, callings[i]);
 		}
-
-
-
-
-
-
 	}
 }
