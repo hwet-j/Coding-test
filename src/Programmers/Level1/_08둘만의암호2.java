@@ -50,9 +50,7 @@ public class _08둘만의암호2 {
 		for(int i=0;i<char_arr.length;i++){
 			answer += char_arr[i];
 		}
-
 		System.out.println(answer);
-
 	}
 }
 
