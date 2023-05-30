@@ -34,7 +34,6 @@ public class _08둘만의암호2 {
 						break;
 					}
 				}
-
 				if(block == 0){
 					cnt++;
 				}
