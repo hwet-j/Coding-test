@@ -20,7 +20,7 @@ public class _10문자열나누기 {
 		}
 
 		for (int i=0;i<s.length();i++){
-			String key = s.substring(i, i+1)
+			String key = s.substring(i, i+1);
 			map.replace(key, map.get(key) + 1);
 			for (String mapKey: map.keySet()){
 				if (key == s.substring(i, i+1));
