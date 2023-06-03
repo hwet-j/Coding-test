@@ -12,9 +12,19 @@ public class _82 {
 	public static void main(String[] args) {
 		String[] picture = {".xx...xx.", "x..x.x..x", "x...x...x", ".x.....x.", "..x...x..", "...x.x...", "....x...."};
 		int k = 2;
-		String[] pictureChange = new String[picture.length * k];
-		for (int i=0; i< pictureChange.length; i++){
-
+		int cnt = 0;
+		String temp = "";
+		String[] answer = new String[picture.length * k];
+		for (int i=0; i< picture.length; i++){
+			for (int j=0;j<k;j++){
+				temp = "";
+				for(int r=0;r<picture[i].length();r++){
+					for (int t=0; t<k;t++){
+						temp += picture[i].substring(r, r+1);
+					}
+				}
+				answer[cnt++] = temp;
+			}
 		}
 
 
