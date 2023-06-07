@@ -1,0 +1,8 @@
+SELECT ANIMAL_ID, NAME
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID ASC
+
+
+/*
+ORDER BY 절은 ASC,DESC 가 가능하다. 생략하면 ASC 오름차순으로 정렬한다.
+*/
