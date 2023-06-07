@@ -1,0 +1,8 @@
+SELECT PT_NAME, PT_NO, GEND_CD, AGE, NVL(TLNO, 'NONE')
+FROM PATIENT
+WHERE AGE <= 12 AND GEND_CD = 'W'
+ORDER BY AGE DESC, PT_NAME ASC
+
+/*
+NVL(컬럼, 대체값) - NULL 값인지 확인하여 NULL값인 경우 대체값으로 수정해준다.
+*/
