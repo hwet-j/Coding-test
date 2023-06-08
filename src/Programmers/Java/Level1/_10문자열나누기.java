@@ -20,7 +20,6 @@ public class _10문자열나누기 {
 			map.put(item,0);
 		}
 		int answer = 0;
-		int max = 0;
 		for (int i=0;i<s.length();i++){
 			String key = s.substring(i, i+1);
 
