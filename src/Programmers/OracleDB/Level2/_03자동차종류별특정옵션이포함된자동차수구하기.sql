@@ -8,5 +8,5 @@ ORDER BY CAR_TYPE
 
 
 /*
-WHERE 절에 LIKE 명령어를 사용해서 구해줬다.
+WHERE 절에 LIKE 명령어를 사용해서 구해줬다. , GROUP BY 를 사용시에 SELECT 절의 컬럼 주의해서 사용
 */
