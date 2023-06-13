@@ -1,0 +1,19 @@
+SELECT YEAR, MONTH, GENDER, COUNT(CNT_USER)
+FROM
+(
+SELECT TO_CHAR(SALES_DATE, 'YYYY') YEAR,  TO_NUMBER(TO_CHAR(SALES_DATE, 'MM')) MONTH, GENDER, COUNT(USER_ID) CNT_USER
+FROM ONLINE_SALE a JOIN USER_INFO b
+USING(USER_ID)
+GROUP BY TO_CHAR(SALES_DATE, 'YYYY'),  TO_CHAR(SALES_DATE, 'MM'), GENDER, USER_ID
+HAVING GENDER IS NOT null
+)
+GROUP BY YEAR, MONTH, GENDER
+ORDER BY 1, 2, 3
+
+
+/*
+ONLINE_SALE 와 USER_INFO 를 USER_ID로 연결시켜주고
+년,월,성별 별로 구매한 정보를 구해야하므로 USER_ID까지 4개의 컬럼으로 그룹화를 진행해 주며,
+성별이 null 인경우가 존재하다고 했으므로 이를 제외해준다.
+이 쿼리문을 서브쿼리로 만들어주고, 성별, 유저별로 저장된 정보를 다시 년,월,성별로 묶어 COUNT를 다시 진행
+*/
