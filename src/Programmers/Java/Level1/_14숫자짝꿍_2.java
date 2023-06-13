@@ -56,7 +56,6 @@ public class _14숫자짝꿍_2 {
             }
         }
         System.out.println(answer);
-
     }
 }
 
