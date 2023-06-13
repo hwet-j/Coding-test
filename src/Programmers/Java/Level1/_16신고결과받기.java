@@ -61,6 +61,7 @@ public class _16신고결과받기 {
         System.out.println(Arrays.toString(result));
 
 
+
     }
 }
 
