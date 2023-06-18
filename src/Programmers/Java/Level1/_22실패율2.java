@@ -1,12 +1,9 @@
 package src.Programmers.Java.Level1;
 
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
-public class _22실패율 {
+public class _22실패율2 {
     public static void main(String[] args) {
         int N = 5;
         int[] stages = {2, 1, 2, 6, 2, 4, 3, 3};
@@ -49,15 +46,7 @@ public class _22실패율 {
 
 
 /*
-배열만을 사용하여 풀이하려 한 코드이다.
-
-정답에 매우 근접 사실상 정답이나 마찬가지지만, 큰숫자로 나누게 될 경우
-
-0.19029041591 를 넘어서 1.019E-19 와같은 형태가 되는데 이럴때 비교를 하게되면 0.19가 더욱 작은 값으로 인식하게 되어버리는 문제가 생긴다.
-
-이런 문제는 Double.compare(number1, number2); 와같이 해결이 가능하지만 숫자 크기에 따라 정렬을
-
-Array.sort로 했기 때문에 직접적인 사용이 불가능하다. 그렇기 때문에 하나씩 비교를하면서 나열을 하거나 다른 방식을 찾아봐야할것같다.
+처음에  Array.sort 로 정렬해 문제를 풀이하려했으나, 동일한 값이 나왔을 경우 비교하여 순위를 결정하는 방법이 어려워
 
 
 */
