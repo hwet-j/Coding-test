@@ -30,8 +30,8 @@ WHERE MOD(empno,2) = 1;
 -- 제곱과 제곱근을 구하는 방법
 
 -- 풀이 못함
--- 문제를 못찾아 비슷한 문제로 에시
--- empno에서 deptno의 제곱을 뺸 값에 루트씌운 값을 소수점 4자리까지만 출력하라
+-- 문제를 못찾아 비슷한 문제로 예시
+-- empno에 deptno의 제곱을 뺸 값에 루트씌운 값을 소수점 4자리까지만 출력하라
 SELECT ROUND(SQRT(empno-POWER(deptno,2)), 4)
 FROM emp;
 
