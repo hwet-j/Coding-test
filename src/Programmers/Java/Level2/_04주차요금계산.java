@@ -2,7 +2,7 @@ package src.Programmers.Java.Level2;
 
 import java.util.*;
 
-public class _05주차요금계산 {
+public class _04주차요금계산 {
 
 	public static void main(String[] args) {
 		int[] fees = {180, 5000, 10, 600};
@@ -29,7 +29,7 @@ public class _05주차요금계산 {
 		// 자동차별 주차 시간 초기값
 		for (String carN : carEnter.keySet()){
 			parkingTime.put(carN, 0);
-			
+
 			// 출차기록까지 존재
 			if (carEnter.get(carN) % 2 == 0){
 				for (String item : records){
@@ -105,7 +105,7 @@ public class _05주차요금계산 {
 
 		// TreeMap을 사용하여 Key를 기준으로 오름차순으로 정렬한다.
 		Map<String, Integer> sortedMap = new TreeMap<>(parkingTime);
-	
+
 		// 프로그래머스의 정답은 배열로 제출해야함
 		int[] answer = new int[sortedMap.size()];
 		int index = 0;
